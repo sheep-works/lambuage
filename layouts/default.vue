@@ -2,11 +2,39 @@
     <v-app>
         <v-layout class="rounded rounded-md">
 
-            <v-app-bar :elevation="2">
+            <v-app-bar :elevation="2" style="position: fixed; top:0; z-index: 100; width: 100%">
 
                 <template v-slot:title>
                     <HomeIcon />
                 </template>
+                <v-spacer></v-spacer>
+                <v-item-group id="nav-items" class="mr-10">
+                    <v-item>
+                        <v-btn outlined>
+                            <a href="#">トップ</a>
+                        </v-btn>
+                    </v-item>
+                    <v-item>
+                        <v-btn outlined>
+                            <a href="#contents">業務内容</a>
+                        </v-btn>
+                    </v-item>
+                    <v-item>
+                        <v-btn>
+                            <a href="#information">会社概要</a>
+                        </v-btn>
+                    </v-item>
+                    <v-item>
+                        <v-btn>
+                            <a href="#inquire">お問い合わせ</a>
+                        </v-btn>
+                    </v-item>
+                    <v-item>
+                        <v-btn>
+                            <NuxtLink to="news">お知らせ</NuxtLink>
+                        </v-btn>
+                    </v-item>
+                </v-item-group>
 
             </v-app-bar>
             <!-- <v-navigation-drawer location="end">
@@ -18,16 +46,28 @@
             <v-main class="d-flex align-center justify-center" style="min-height: 300px; width: 1000px;">
                 <slot />
             </v-main>
-            <v-footer app name="footer" color="blue-grey-lighten-2">
-                <v-btn class="mx-auto" variant="text">
-                    Get data
-                </v-btn>
+            <v-footer app name="footer" border>
+                <v-container fluid class="text-center">
+                    Copyright © 2024- Lambuage LLC. All rights reserved
+                </v-container>
+
             </v-footer>
         </v-layout>
     </v-app>
 </template>
   
 <script setup lang="ts">
-import type HomeIconVue from '~/components/HomeIcon.vue';
 import HomeIcon from '~/components/HomeIcon.vue';
 </script>
+
+<style>
+#nav-items a {
+    color: inherit;
+    font-size: larger;
+    text-decoration: none;
+}
+
+#nav-items a:visited {
+    color: inherit;
+}
+</style>

@@ -1,42 +1,46 @@
 <template>
-    <v-container fluid>
+    <section>
         <v-card class="pa-6" elevation="5">
             <v-card-title :class="position === 'left' ? 'text-right' : 'text-left'">
 
             </v-card-title>
             <v-card-text>
                 <v-row v-if="position === 'left'">
-                    <v-col>
+                    <v-col sm="12" md="12" lg="5">
                         <v-parallax :src="src" height="500" />
                     </v-col>
-                    <v-col flex-column class="text-center">
+                    <v-col class="text-center">
                         <h2 class="text-h4 font-weight-bold mb-4">
                             {{ title }}
                         </h2>
                         <div class="text-body-1">
                             <slot />
+                            <v-sheet v-if="link !== undefined" class="my-4">
+                                <a :href="link.href" target="_blank">{{ link.text }}</a>
+                            </v-sheet>
                         </div>
                     </v-col>
                 </v-row>
                 <v-row v-else>
-                    <v-col flex-column class="text-center">
+                    <v-col class="text-center" sm="12" md="12" lg="7" order="1" order-md="2" order-sm="2" order-lg="1">
                         <h2 class="text-h4 font-weight-bold mb-4">
                             {{ title }}
                         </h2>
                         <div class="text-body-1">
                             <slot />
+                            <v-sheet v-if="link !== undefined">
+                                <a :href="link.href" target="_blank">{{ link.text }}</a>
+                            </v-sheet>
                         </div>
                     </v-col>
-                    <v-col>
+                    <v-col order-md="1">
                         <v-parallax :src="src" height="500" />
                     </v-col>
                 </v-row>
             </v-card-text>
-            <v-card-actions v-if="link !== undefined">
-                <a :href="link.href" target="_blank">{{ link.text }}</a>
-            </v-card-actions>
+
         </v-card>
-    </v-container>
+    </section>
 </template>
 
 <script setup lang="ts">

@@ -1,14 +1,14 @@
 <template>
   <v-container fluid>
     <HeroImage />
-    <v-container class="pb-10" max-width="1440px">
+    <section fluid style="max-width: 1440px; margin-left: auto; margin-right: auto;">
       <SectionTitle id="contents">業務内容</SectionTitle>
       <Features />
       <SectionTitle id="information">会社概要</SectionTitle>
       <CorporateInfo />
       <SectionTitle id="inquire">お問い合わせ</SectionTitle>
       <InquireForm />
-    </v-container>
+    </section>
   </v-container>
 </template>
 

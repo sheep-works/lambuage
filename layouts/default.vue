@@ -11,22 +11,22 @@
                 <v-item-group id="nav-items" class="mr-10">
                     <v-item>
                         <v-btn outlined>
-                            <a href="#">トップ</a>
+                            <a href="/#">トップ</a>
                         </v-btn>
                     </v-item>
                     <v-item>
                         <v-btn outlined>
-                            <a href="#contents">業務内容</a>
+                            <a href="/#contents">業務内容</a>
                         </v-btn>
                     </v-item>
                     <v-item>
                         <v-btn>
-                            <a href="#information">会社概要</a>
+                            <a href="/#information">会社概要</a>
                         </v-btn>
                     </v-item>
                     <v-item>
                         <v-btn>
-                            <a href="#inquire">お問い合わせ</a>
+                            <a href="/#inquire">お問い合わせ</a>
                         </v-btn>
                     </v-item>
                     <v-item>

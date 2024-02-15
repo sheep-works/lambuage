@@ -6,7 +6,7 @@
             </v-card-title>
             <v-card-text>
                 <v-row v-if="position === 'left'">
-                    <v-col sm="12" md="12" lg="5">
+                    <v-col cols="12" md="5">
                         <v-parallax :src="src" height="500" />
                     </v-col>
                     <v-col class="text-center">
@@ -22,7 +22,8 @@
                     </v-col>
                 </v-row>
                 <v-row v-else>
-                    <v-col class="text-center" sm="12" md="12" lg="7" order="1" order-md="2" order-sm="2" order-lg="1">
+                    <v-col class="text-center" cols="12" md="7" order="1" order-md="1" order-sm="2" order-xs="2"
+                        order-lg="1">
                         <h2 class="text-h4 font-weight-bold mb-4">
                             {{ title }}
                         </h2>

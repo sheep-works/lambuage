@@ -58,18 +58,18 @@
 
 <script setup lang="ts">
 import HomeIcon from '~/components/HomeIcon.vue';
-useHead({
-    script: [
-        {
-            src: "https://www.googletagmanager.com/gtag/js?id=G-PFT0GHJFSL",
-            async: 'true'
-        },
-        {
-            type: "text/javascript",
-            innerHTML: "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'G-PFT0GHJFSL');"
-        }
-    ],
-});
+// useHead({
+//     script: [
+//         {
+//             src: "https://www.googletagmanager.com/gtag/js?id=G-PFT0GHJFSL",
+//             async: 'true'
+//         },
+//         {
+//             type: "text/javascript",
+//             innerHTML: "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'G-PFT0GHJFSL');"
+//         }
+//     ],
+// });
 </script>
 
 <style>
